@@ -4,8 +4,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: flex-end;
-	background-image: url(..//../assets/784476-popular-death-star-wallpaper-1920x1080-for-meizu.jpg);
-
+	background-image: url('..//../assets/Hero/heroBackground.jpg');
 	background-position: top;
 	background-repeat: no-repeat;
 	background-size: cover;

@@ -1,9 +1,9 @@
 import styles from './Hero.module.css'
 import Header from '../Header/Header'
-import yodaGreenImg from '..//..//assets/yodagreen.png'
+import yodaGreenImg from '..//..//assets/Hero/yodagreen.png'
 import { motion } from 'motion/react'
 import Lottie from 'lottie-react'
-import animationSaber from '..//..//assets/saber.json'
+import animationSaber from '..//..//assets/Animation/saberAnimation.json'
 import {
 	animationDelay,
 	animationDuration,
