@@ -1,27 +1,22 @@
 import styles from './Header.module.css'
 import { motion } from 'motion/react'
 const Header = () => {
+	const headerVariant = {
+		hidden: { x: 250, y: 200, rotateZ: '-30deg', scale: 0 },
+		visible: { x: 0, y: 0, rotateZ: '0deg', scale: 1 },
+	}
 	return (
 		<>
 			<header className={styles['header']}>
 				<motion.div
-					initial={{
-						x: 250,
-						y: 200,
-						rotateZ: '-30deg',
-						scale: 0,
-					}}
-					animate={{
-						x: 0,
-						y: 0,
-						rotateZ: '0deg',
-						scale: 1,
-					}}
+					initial={'hidden'}
+					animate={'visible'}
 					transition={{
 						delay: 2.6,
 						duration: 1,
 						type: 'spring',
 					}}
+					variants={headerVariant}
 					className={styles['header__container']}
 				>
 					<nav className={styles['header__container-nav']}>

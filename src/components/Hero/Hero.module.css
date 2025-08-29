@@ -18,20 +18,20 @@
 	display: flex;
 	flex-direction: column;
 }
-.container__text-title {
+.hero__title {
 	font-family: 'StarWarsOutline';
 	color: white;
 	font-size: 8rem;
 }
-.container__text-pretext {
+.hero__pretext {
 	font-size: 5rem;
 	font-family: 'StarWarsHollow';
 }
-.container__starwars-text {
+.container__starwars-group {
 	display: flex;
 	gap: 50px;
 }
-.container__text-starwars {
+.starwars-group-word {
 	font-family: 'StarWarsMonoLine';
 	font-size: 6rem;
 }
@@ -40,12 +40,14 @@
 	color: white;
 	font-size: 8rem;
 }
-.hero__section-yoda-green {
+.hero-yoda {
 	margin: 0;
 	width: 40%;
 }
 .hero__container-saber {
 	position: absolute;
 	margin: 0;
+}
+.container-saber {
 	width: 700px;
 }

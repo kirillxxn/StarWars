@@ -4,6 +4,17 @@ import yodaGreenImg from '..//..//assets/yodagreen.png'
 import { motion } from 'motion/react'
 import Lottie from 'lottie-react'
 import animationSaber from '..//..//assets/saber.json'
+import {
+	animationDelay,
+	animationDuration,
+	pretextVariant,
+	saberVariant,
+	starVariant,
+	titleVariant,
+	universeVariant,
+	warsVariant,
+	yodaVariant,
+} from './animation.constant'
 const Hero = () => {
 	return (
 		<>
@@ -11,127 +22,97 @@ const Hero = () => {
 			<section className={styles['hero__section']}>
 				<div className={styles['section__container-text']}>
 					<motion.h1
-						initial={{
-							y: -200,
-						}}
-						animate={{
-							x: 0,
-							y: 0,
-						}}
+						initial={'hidden'}
+						animate={'visible'}
 						transition={{
 							type: 'spring',
 						}}
-						className={styles['container__text-title']}
+						variants={titleVariant}
+						className={styles['hero__title']}
 					>
 						Welcome
 					</motion.h1>
 					<motion.span
-						initial={{
-							opacity: 0,
-							y: 300,
-						}}
-						animate={{
-							opacity: 1,
-							x: 0,
-							y: 0,
-						}}
+						initial={'hidden'}
+						animate={'visible'}
 						transition={{
-							duration: 1,
+							duration: animationDuration.pretext,
 						}}
-						className={styles['container__text-pretext']}
+						variants={pretextVariant}
+						className={styles['hero__pretext']}
 					>
 						To
 					</motion.span>
-
-					<div className={styles['container__starwars-text']}>
+					<div className={styles['container__starwars-group']}>
 						<motion.span
-							initial={{
-								opacity: 0,
-								x: -300,
-							}}
-							animate={{
-								opacity: 1,
-								x: 0,
-								y: 0,
-							}}
+							initial={'hidden'}
+							animate={'visible'}
 							transition={{
-								duration: 1,
+								duration: animationDuration.starWarsWord,
 								type: 'spring',
 							}}
-							className={styles['container__text-starwars']}
+							variants={starVariant}
+							className={styles['starwars-group-word']}
 						>
 							Star
 						</motion.span>
 						<motion.span
-							initial={{
-								opacity: 0,
-								x: 300,
-							}}
-							animate={{
-								opacity: 1,
-								x: 0,
-								y: 0,
-							}}
+							initial={'hidden'}
+							animate={'visible'}
 							transition={{
-								duration: 1,
+								duration: animationDuration.starWarsWord,
 								type: 'spring',
 							}}
-							className={styles['container__text-starwars']}
+							variants={warsVariant}
+							className={styles['starwars-group-word']}
 						>
 							Wars
 						</motion.span>
 					</div>
 					<motion.span
-						initial={{
-							y: 200,
-						}}
-						animate={{
-							x: 0,
-							y: 0,
-						}}
+						initial={'hidden'}
+						animate={'visible'}
 						transition={{
-							delay: 2.7,
+							delay: animationDelay.universe,
 							type: 'spring',
 						}}
+						variants={universeVariant}
 						className={styles['container-text-universe']}
 					>
 						Universe
 					</motion.span>
 				</div>
 				<motion.img
-					initial={{ opacity: 0 }}
-					animate={{
-						opacity: [0, 0, 1],
-					}}
+					initial={'hidden'}
+					animate={'visible'}
 					transition={{
-						delay: 2.6,
-						duration: 0.2,
+						delay: animationDelay.yoda,
+						duration: animationDuration.yoda,
 					}}
-					className={styles['hero__section-yoda-green']}
+					variants={yodaVariant}
+					className={styles['hero-yoda']}
 					src={yodaGreenImg}
-					alt=''
+					alt='Изображение мастера йоды,держащего джедайский меч'
 				/>
 				<motion.div
-					initial={{
-						x: -100,
-						y: -100,
-					}}
-					animate={{
-						x: 0,
-						y: -220,
-						rotateZ: '50deg',
-					}}
+					initial={'hidden'}
+					animate={'visible'}
 					transition={{
-						delay: 0,
-						duration: 0,
+						delay: animationDelay.saber,
+						duration: animationDuration.saber,
 					}}
+					variants={saberVariant}
 					className={styles['hero__container-saber']}
 				>
-					<Lottie loop={false} autoplay={true} animationData={animationSaber} />
+					<Lottie
+						className={styles['container-saber']}
+						loop={false}
+						autoplay={true}
+						animationData={animationSaber}
+					/>
 				</motion.div>
 			</section>
 		</>
 	)
 }
-
 export default Hero
