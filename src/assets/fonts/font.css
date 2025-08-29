@@ -1,0 +1,18 @@
+@font-face {
+	font-family: 'StarWarsHollow';
+	src: url('./Starjhol.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'StarWarsOutline';
+	src: url('./Starjout.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'StarWarsMonoline';
+	src: url('./Strjmono.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
