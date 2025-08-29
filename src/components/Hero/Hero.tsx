@@ -18,9 +18,13 @@ import {
 const Hero = () => {
 	return (
 		<>
+			{/* Компонент шапки сайта */}
 			<Header />
+			{/* Секция героя */}
 			<section className={styles['hero__section']}>
+				{/* Контейнер с текстовым содержимым */}
 				<div className={styles['section__container-text']}>
+					{/* Анимированный заголовок */}
 					<motion.h1
 						initial={'hidden'}
 						animate={'visible'}
@@ -32,6 +36,7 @@ const Hero = () => {
 					>
 						Welcome
 					</motion.h1>
+					{/* Анимированный подтекст "To" */}
 					<motion.span
 						initial={'hidden'}
 						animate={'visible'}
@@ -43,7 +48,9 @@ const Hero = () => {
 					>
 						To
 					</motion.span>
+					{/* Контейнер для слов "Star Wars" */}
 					<div className={styles['container__starwars-group']}>
+						{/* Анимированное слово "Star" */}
 						<motion.span
 							initial={'hidden'}
 							animate={'visible'}
@@ -56,6 +63,7 @@ const Hero = () => {
 						>
 							Star
 						</motion.span>
+						{/* Анимированное слово "Wars" */}
 						<motion.span
 							initial={'hidden'}
 							animate={'visible'}
@@ -69,6 +77,7 @@ const Hero = () => {
 							Wars
 						</motion.span>
 					</div>
+					{/* Анимированное слово "Universe" */}
 					<motion.span
 						initial={'hidden'}
 						animate={'visible'}
@@ -82,6 +91,7 @@ const Hero = () => {
 						Universe
 					</motion.span>
 				</div>
+				{/* Анимированное изображение Йоды */}
 				<motion.img
 					initial={'hidden'}
 					animate={'visible'}
@@ -94,6 +104,7 @@ const Hero = () => {
 					src={yodaGreenImg}
 					alt='Изображение мастера йоды,держащего джедайский меч'
 				/>
+				{/* Контейнер с анимацией светового меча */}
 				<motion.div
 					initial={'hidden'}
 					animate={'visible'}
@@ -104,6 +115,7 @@ const Hero = () => {
 					variants={saberVariant}
 					className={styles['hero__container-saber']}
 				>
+					{/* Lottie анимация меча */}
 					<Lottie
 						className={styles['container-saber']}
 						loop={false}
