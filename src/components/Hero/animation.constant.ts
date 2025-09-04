@@ -33,8 +33,8 @@ export const warsVariant = {
 }
 // Анимация слова "Universe"
 export const universeVariant = {
-	hidden: { y: 200 },
-	visible: { x: 0, y: 0 },
+	hidden: { opacity: 0, y: 200 },
+	visible: { opacity: 1, x: 0, y: 0 },
 }
 // Анимация Йоды
 export const yodaVariant = {
@@ -44,5 +44,5 @@ export const yodaVariant = {
 // Анимация светового меча
 export const saberVariant = {
 	hidden: { x: -100, y: -100 },
-	visible: { x: 0, y: -220, rotateZ: '50deg' },
+	visible: { x: -130, y: -180, rotateZ: '50deg' },
 }

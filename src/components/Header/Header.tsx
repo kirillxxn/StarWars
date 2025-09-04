@@ -27,7 +27,7 @@ const Header = () => {
 								</a>
 							</li>
 							<li className={styles['container__nav-item']}>
-								<a className={styles['container__nav-link']} href='#'>
+								<a className={styles['container__nav-link']} href='#series'>
 									series
 								</a>
 							</li>
