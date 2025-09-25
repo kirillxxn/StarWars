@@ -29,20 +29,17 @@ import {
 const Series = () => {
 	const sectionRef = useRef(null)
 
-	// Отслеживание прогресса скролла
 	const { scrollYProgress } = useScroll({
 		target: sectionRef,
 		offset: ['start end', 'end start'],
 	})
 
-	// Плавная пружинная анимация для smooth эффектов
 	const smoothProgress = useSpring(scrollYProgress, {
 		stiffness: 80,
 		damping: 50,
 		restDelta: 0.001,
 	})
 
-	// Эффекты вращения и масштаба
 	const rotateRight = useTransform(smoothProgress, [0, 1], [0, 2])
 	const rotateLeft = useTransform(smoothProgress, [0, 1], [0, -2])
 
