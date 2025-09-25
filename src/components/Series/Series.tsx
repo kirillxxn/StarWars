@@ -43,7 +43,6 @@ const Series = () => {
 	const rotateRight = useTransform(smoothProgress, [0, 1], [0, 2])
 	const rotateLeft = useTransform(smoothProgress, [0, 1], [0, -2])
 
-	// Левый ряд двигается вверх, правый - вниз
 	const yUp = useTransform(smoothProgress, [0, 1], ['20%', '-60%']) // Вверх
 	const yDown = useTransform(smoothProgress, [0, 1], ['-20%', '60%']) // Вниз
 
